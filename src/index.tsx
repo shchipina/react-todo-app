@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable import/no-unresolved */
+import { createRoot } from 'react-dom';
 import { App } from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+import 'bulma/css/bulma.css';
+import '@fortawesome/fontawesome-free/css/all.css';
+import './styles/index.scss';
+
+createRoot(document.getElementById('root') as HTMLDivElement).render(<App />);
